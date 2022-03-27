@@ -183,10 +183,11 @@ input.error {
   border: 2px solid var(--clr-red-dark);
 }
 .colors {
-  min-height: calc(100vh - 100px);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(223.33px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(96px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  max-width: 1000px;
+  padding: 5rem;
 }
 .color {
   padding: 1rem 2rem;
@@ -213,4 +214,22 @@ input.error {
   text-transform: uppercase;
   font-size: 0.85rem;
   margin-top: 0.5rem;
+}
+
+.single-color {
+  width: 14rem;
+  height: 7rem;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 1rem;
+
+  & .percent {
+    margin-top: 3rem;
+  }
+}
+
+.copied-msg {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  opacity: 0.8;
 }
