@@ -25,9 +25,9 @@ function App() {
         <button type='submit' >Submut</button>
       </form>
 
-      <List list={list} removeItem={removeItem} />
+      <List list={list} setList={setList} removeItem={removeItem} />
 
-      {list.length > 1 ? <button id='clear-all'> Clear All</button> : <></>}
+      {list.length > 1 ? <button id='clear-all' onClick={() => setList([])}> Clear All</button> : <></>}
     </div>
   )
 }

@@ -154,7 +154,8 @@ p {
     max-width: 400px;
     height: 2rem;
     border: none;
-    background-color: #E8FCFB;
+    background-color: #ebf9fc;
+    padding-left: 1rem;
     font-size: 1rem;
     border-radius: 5px;
     margin-bottom: 1rem;
@@ -173,16 +174,28 @@ p {
   margin-bottom: 2rem;
 }
 
+.list {
+  margin-bottom: 2rem;
+}
+
 .list-item {
   text-align: left;
   font-size: 1.25rem;
-  padding: 1rem 10%;
+  padding: 1rem 5%;
   display: flex;
   justify-content: space-between;
+  transition: 200ms background ease-in;
+
+  &:hover {
+    background-color: #f3f5f6;
+  }
 
   & button {
     background-color: inherit;
-    color: red;
+    width: 4rem;
+    &:nth-child(2){
+      color: red;
+    }
   }
 }
 
@@ -192,4 +205,8 @@ p {
   border: 2px solid red;
   border-radius: 5px;
   width: 10rem;
+}
+
+.edit-btn {
+  color: #c6c6c6;
 }

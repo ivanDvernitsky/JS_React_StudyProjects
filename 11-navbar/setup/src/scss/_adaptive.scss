@@ -1,0 +1,23 @@
+@media (min-width: 800px) {
+    .toggle-nav-btn__wrapper {
+        display: none;
+    }
+
+    .nav-list {
+        visibility: visible !important;
+        position: inherit;
+        width: auto;
+        top: 0;
+        margin-top: 0;
+
+        & ul{
+            display: flex;
+        }
+    }
+}
+
+@media (max-width: 799px) {
+    .social-media {
+        display: none;
+    }
+}

@@ -1,8 +1,4 @@
-/*
-=============== 
-Variables
-===============
-*/
+
 
 :root {
   /* dark shades of primary color*/
@@ -78,7 +74,6 @@ h4 {
   letter-spacing: var(--spacing);
   text-transform: capitalize;
   line-height: 1.25;
-  margin-bottom: 0.75rem;
 }
 h1 {
   font-size: 3rem;
@@ -139,94 +134,52 @@ p {
 Navbar
 ===============
 */
-nav {
-  background: var(--clr-white);
-  box-shadow: var(--light-shadow);
-}
-.nav-header {
+
+.navbar {
+  background-color: #fff;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
 }
-.nav-toggle {
-  font-size: 1.5rem;
-  color: var(--clr-primary-5);
-  background: transparent;
-  border-color: transparent;
-  transition: var(--transition);
-  cursor: pointer;
-}
-.nav-toggle:hover {
-  color: var(--clr-primary-1);
-  transform: rotate(90deg);
-}
-.logo {
-  height: 40px;
-}
-.links a {
-  color: var(--clr-grey-3);
+
+.nav-list {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
   font-size: 1rem;
-  text-transform: capitalize;
-  letter-spacing: var(--spacing);
-  display: block;
-  padding: 0.5rem 1rem;
-  transition: var(--transition);
-}
-.links a:hover {
-  background: var(--clr-primary-8);
-  color: var(--clr-primary-5);
-  padding-left: 1.5rem;
-}
-.social-icons {
-  display: none;
-}
-.links-container {
-  height: 0;
-  overflow: hidden;
-  transition: var(--transition);
-}
-.show-container {
-  height: 10rem;
-}
-@media screen and (min-width: 800px) {
-  .nav-center {
-    max-width: 1170px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-  .nav-header {
-    padding: 0;
-  }
-  .nav-toggle {
-    display: none;
-  }
-  .links-container {
-    height: auto !important;
-  }
-  .links {
-    display: flex;
-  }
-  .links a {
-    padding: 0;
-    margin: 0 0.5rem;
-  }
-  .links a:hover {
-    padding: 0;
-    background: transparent;
-  }
-  .social-icons {
-    display: flex;
-  }
-  .social-icons a {
-    margin: 0 0.5rem;
-    color: var(--clr-primary-5);
-    transition: var(--transition);
-  }
-  .social-icons a:hover {
-    color: var(--clr-primary-7);
+  margin-top: 1rem;
+  text-align: right;
+  width: 35%;
+  position: absolute;
+  right: 0;
+  top: 4.5rem;
+
+  & li {
+    padding: 0.25rem 1.5rem;
   }
 }
+
+.toggle-nav-btn {
+  width: 2rem;
+  height: 2rem;
+  transition: 400ms transform ease-in;
+
+  &:hover {
+    transform: rotate(90deg);
+  }
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  list-style: none;
+
+  & li {
+    padding: 0 0.5rem;
+  }
+}
+
+@import 'adaptive';

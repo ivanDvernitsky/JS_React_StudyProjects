@@ -7,6 +7,7 @@ const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
   const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
+
   const toggleLinks = () => {
     setShowLinks(!showLinks);
   };
@@ -18,6 +19,7 @@ const Navbar = () => {
       linksContainerRef.current.style.height = '0px';
     }
   }, [showLinks]);
+  
   return (
     <nav>
       <div className='nav-center'>
