@@ -4,6 +4,7 @@ import { AppContext } from './context'
 
 const Home = () => {
   const {openSidebar, openModal} = useContext(AppContext)
+  
   return (
     <>
     <section className="main">
