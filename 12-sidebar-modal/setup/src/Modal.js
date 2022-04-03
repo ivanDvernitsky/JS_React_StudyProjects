@@ -1,7 +1,21 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { FaTimes } from 'react-icons/fa'
+import { AppContext } from './context'
+
 const Modal = () => {
-  return <h2>Modal</h2>
+  const {isModalOpen, closeModal} = useContext(AppContext)
+
+  return (
+    <div className={`${ isModalOpen ? 'modal-overlay show-modal' : 'modal-overlay '}`}>
+      <div className="modal-container">
+        <h3>Show Modal</h3>
+
+        <button className="close-modal-btn" onClick={closeModal}>
+          <FaTimes className='close-modal-btn__icon'/>
+        </button>
+      </div>
+    </div>
+  )
 }
 
 export default Modal
